@@ -1,0 +1,1347 @@
+{
+	"info": {
+		"_postman_id": "5c6e27a2-ee89-4da5-8ffa-9e671c337acc",
+		"name": "E-commerce App SPLE",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29700618"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\": 11,\r\n    \"firstName\": \"Lordd\",\r\n    \"lastName\": \"Voldemort\",\r\n    \"mobileNumber\": \"0812345678\",\r\n    \"email\": \"lord.voldemort@darkarts.com\",\r\n    \"password\": \"Horcruxes7\",\r\n    \"roles\": [{\"roleId\": 11, \"roleName\": \"Dark Lord\"}],\r\n    \"address\": {\r\n      \"addressId\": 11,\r\n      \"street\": \"Unknown\",\r\n      \"buildingName\": \"The Dark Lair\",\r\n      \"city\": \"Unknown\",\r\n      \"state\": \"Unknown\",\r\n      \"country\": \"United Kingdom\",\r\n      \"pincode\": \"000000\"\r\n    },\r\n    \"cart\": {\r\n      \"cartId\": 11,\r\n      \"totalPrice\": 999,\r\n      \"products\": [\r\n        {\r\n          \"productId\": 11,\r\n          \"productName\": \"Nagini Statue\",\r\n          \"image\": \"nagini.jpg\",\r\n          \"description\": \"Symbol of his most loyal companion\",\r\n          \"quantity\": 1,\r\n          \"price\": 999,\r\n          \"discount\": 0,\r\n          \"specialPrice\": 999\r\n        }\r\n      ]\r\n    }\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Harry",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\": 1,\r\n    \"firstName\": \"Harry\",\r\n    \"lastName\": \"Potter\",\r\n    \"mobileNumber\": \"0812345678\",\r\n    \"email\": \"harry.potter@hogwarts.com\",\r\n    \"password\": \"Expelliarmus123\",\r\n    \"roles\": [\r\n      {\r\n        \"roleId\": 101,\r\n        \"roleName\": \"ADMIN\"\r\n      }\r\n    ],\r\n    \"address\": {\r\n      \"addressId\": 1,\r\n      \"street\": \"4 Privet Drive\",\r\n      \"buildingName\": \"Dursley Residence\",\r\n      \"city\": \"Little Whinging\",\r\n      \"state\": \"Surrey\",\r\n      \"country\": \"United Kingdom\",\r\n      \"pincode\": \"GU18 5AZ\"\r\n    },\r\n    \"cart\": {\r\n      \"cartId\": 1,\r\n      \"totalPrice\": 150,\r\n      \"products\": [\r\n        {\r\n          \"productId\": 1,\r\n          \"productName\": \"Firebolt\",\r\n          \"image\": \"firebolt.jpg\",\r\n          \"description\": \"Fastest broomstick\",\r\n          \"quantity\": 1,\r\n          \"price\": 150,\r\n          \"discount\": 0,\r\n          \"specialPrice\": 150\r\n        }\r\n      ]\r\n    }\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 11 Feb 2025 15:40:00 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"jwt-token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3MzkyODg0MDAsImVtYWlsIjoiaGFycnkucG90dGVyQGhvZ3dhcnRzLmNvbSJ9.zE6ffkTci3MFPJex_BS8ApHV0PzwdhDA3DfmAWqGTZA\"\n}"
+				},
+				{
+					"name": "Hermione",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\": 2,\r\n    \"firstName\": \"Hermione\",\r\n    \"lastName\": \"Granger\",\r\n    \"mobileNumber\": \"0812345678\",\r\n    \"email\": \"hermione.granger@hogwarts.com\",\r\n    \"password\": \"Leviosa2024\",\r\n    \"roles\": [{\"roleId\": 102, \"roleName\": \"USER\"}],\r\n    \"address\": {\r\n      \"addressId\": 2,\r\n      \"street\": \"Hogwarts Castle\",\r\n      \"buildingName\": \"Gryffindor Tower\",\r\n      \"city\": \"Hogsmeade\",\r\n      \"state\": \"Scotland\",\r\n      \"country\": \"United Kingdom\",\r\n      \"pincode\": \"HW1 1ZZ\"\r\n    },\r\n    \"cart\": {\r\n      \"cartId\": 2,\r\n      \"totalPrice\": 50,\r\n      \"products\": [\r\n        {\r\n          \"productId\": 2,\r\n          \"productName\": \"Advanced Potion-Making\",\r\n          \"image\": \"potion_book.jpg\",\r\n          \"description\": \"A book for potion making\",\r\n          \"quantity\": 1,\r\n          \"price\": 50,\r\n          \"discount\": 0,\r\n          \"specialPrice\": 50\r\n        }\r\n      ]\r\n    }\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 11 Feb 2025 15:43:32 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"jwt-token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3MzkyODg2MTIsImVtYWlsIjoiaGVybWlvbmUuZ3JhbmdlckBob2d3YXJ0cy5jb20ifQ.IKGFynDxR5lWNun7bEcFUkS12yf-BuHFK-z9cVAq99c\"\n}"
+				},
+				{
+					"name": "Ron",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\": 3,\r\n    \"firstName\": \"Ronald\",\r\n    \"lastName\": \"Weasley\",\r\n    \"mobileNumber\": \"0812345678\",\r\n    \"email\": \"ron.weasley@hogwarts.com\",\r\n    \"password\": \"ChudleyCannons10\",\r\n    \"roles\": [{\"roleId\": 102, \"roleName\": \"USER\"}],\r\n    \"address\": {\r\n      \"addressId\": 3,\r\n      \"street\": \"The Burrow\",\r\n      \"buildingName\": \"Weasley Residence\",\r\n      \"city\": \"Ottery St. Catchpole\",\r\n      \"state\": \"Devon\",\r\n      \"country\": \"United Kingdom\",\r\n      \"pincode\": \"EX11 1AL\"\r\n    },\r\n    \"cart\": {\r\n      \"cartId\": 3,\r\n      \"totalPrice\": 20,\r\n      \"products\": [\r\n        {\r\n          \"productId\": 3,\r\n          \"productName\": \"Chocolate Frogs\",\r\n          \"image\": \"choco_frogs.jpg\",\r\n          \"description\": \"Magical chocolate with collectible cards\",\r\n          \"quantity\": 5,\r\n          \"price\": 4,\r\n          \"discount\": 0,\r\n          \"specialPrice\": 20\r\n        }\r\n      ]\r\n    }\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 11 Feb 2025 15:44:20 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"jwt-token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3MzkyODg2NjAsImVtYWlsIjoicm9uLndlYXNsZXlAaG9nd2FydHMuY29tIn0.oITsqHvrzzbvSG_U5t3nFOj1JtFoPacChhPH8zUVvOU\"\n}"
+				},
+				{
+					"name": "Albus",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\": 4,\r\n    \"firstName\": \"Albus\",\r\n    \"lastName\": \"Dumbledore\",\r\n    \"mobileNumber\": \"0812345678\",\r\n    \"email\": \"albus.dumbledore@hogwarts.com\",\r\n    \"password\": \"ElderWand1945\",\r\n    \"roles\": [{\"roleId\": 102, \"roleName\": \"USER\"}],\r\n    \"address\": {\r\n      \"addressId\": 4,\r\n      \"street\": \"Hogwarts Castle\",\r\n      \"buildingName\": \"Headmaster’s Office\",\r\n      \"city\": \"Hogsmeade\",\r\n      \"state\": \"Scotland\",\r\n      \"country\": \"United Kingdom\",\r\n      \"pincode\": \"HW1 0ZZ\"\r\n    },\r\n    \"cart\": {\r\n      \"cartId\": 4,\r\n      \"totalPrice\": 500,\r\n      \"products\": [\r\n        {\r\n          \"productId\": 4,\r\n          \"productName\": \"Pensieve\",\r\n          \"image\": \"pensieve.jpg\",\r\n          \"description\": \"Memory storage device\",\r\n          \"quantity\": 1,\r\n          \"price\": 500,\r\n          \"discount\": 0,\r\n          \"specialPrice\": 500\r\n        }\r\n      ]\r\n    }\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 11 Feb 2025 15:44:53 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"jwt-token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3MzkyODg2OTMsImVtYWlsIjoiYWxidXMuZHVtYmxlZG9yZUBob2d3YXJ0cy5jb20ifQ.pv0eE6ucCBvk1mIYZsEuJqBDZMJnYkoRnupPa5X0Rd0\"\n}"
+				},
+				{
+					"name": "Severus",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\": 5,\r\n    \"firstName\": \"Severus\",\r\n    \"lastName\": \"Snape\",\r\n    \"mobileNumber\": \"0812345678\",\r\n    \"email\": \"severus.snape@hogwarts.com\",\r\n    \"password\": \"Always1998\",\r\n    \"roles\": [{\"roleId\": 102, \"roleName\": \"USER\"}],\r\n    \"address\": {\r\n      \"addressId\": 5,\r\n      \"street\": \"Hogwarts Castle\",\r\n      \"buildingName\": \"Slytherin Dungeon\",\r\n      \"city\": \"Hogsmeade\",\r\n      \"state\": \"Scotland\",\r\n      \"country\": \"United Kingdom\",\r\n      \"pincode\": \"HW1 2ZZ\"\r\n    },\r\n    \"cart\": {\r\n      \"cartId\": 5,\r\n      \"totalPrice\": 100,\r\n      \"products\": [\r\n        {\r\n          \"productId\": 5,\r\n          \"productName\": \"Potions Kit\",\r\n          \"image\": \"potions_kit.jpg\",\r\n          \"description\": \"Complete set of potion ingredients\",\r\n          \"quantity\": 1,\r\n          \"price\": 100,\r\n          \"discount\": 0,\r\n          \"specialPrice\": 100\r\n        }\r\n      ]\r\n    }\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 11 Feb 2025 15:45:29 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"jwt-token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3MzkyODg3MjksImVtYWlsIjoic2V2ZXJ1cy5zbmFwZUBob2d3YXJ0cy5jb20ifQ.SVUUMaObdv5A69HTP5eyLKoNWKYwolB0TvhXX3jtAgA\"\n}"
+				},
+				{
+					"name": "Draco",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"userId\": 6,\r\n  \"firstName\": \"Draco\",\r\n  \"lastName\": \"Malfoy\",\r\n  \"mobileNumber\": \"7901234567\",\r\n  \"email\": \"draco.malfoy@malfoymanor.com\",\r\n  \"password\": \"Slytherin123\",\r\n  \"roles\": [\r\n    {\r\n      \"roleId\": 102,\r\n      \"roleName\": \"USER\"\r\n    }\r\n  ],\r\n  \"address\": {\r\n    \"addressId\": 8,\r\n    \"street\": \"Malfoy Manor\",\r\n    \"buildingName\": \"Malfoy Family Estate\",\r\n    \"city\": \"Wiltshire\",\r\n    \"state\": \"England\",\r\n    \"country\": \"United Kingdom\",\r\n    \"pincode\": \"SP2 0XX\"\r\n  },\r\n  \"cart\": {\r\n    \"cartId\": 8,\r\n    \"totalPrice\": 250,\r\n    \"products\": [\r\n      {\r\n        \"productId\": 108,\r\n        \"productName\": \"Nimbus 2001\",\r\n        \"image\": \"nimbus_2001.jpg\",\r\n        \"description\": \"The fastest broomstick before the Firebolt.\",\r\n        \"quantity\": 1,\r\n        \"price\": 250,\r\n        \"discount\": 0,\r\n        \"specialPrice\": 250\r\n      }\r\n    ]\r\n  }\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 11 Feb 2025 15:46:34 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"jwt-token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3MzkyODg3OTQsImVtYWlsIjoiZHJhY28ubWFsZm95QG1hbGZveW1hbm9yLmNvbSJ9.KMysXWR5AtepnFoJLjmi7zfTnu0tOp7QHJU7P88x3M4\"\n}"
+				},
+				{
+					"name": "Sirius",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"userId\": 7,\r\n  \"firstName\": \"Sirius\",\r\n  \"lastName\": \"Black\",\r\n  \"mobileNumber\": \"7501987654\",\r\n  \"email\": \"sirius.black@orderofthephoenix.com\",\r\n  \"password\": \"AnimagusDog123\",\r\n  \"roles\": [\r\n    {\r\n      \"roleId\": 102,\r\n      \"roleName\": \"USER\"\r\n    }\r\n  ],\r\n  \"address\": {\r\n    \"addressId\": 9,\r\n    \"street\": \"12 Grimmauld Place\",\r\n    \"buildingName\": \"Black Family Home\",\r\n    \"city\": \"London\",\r\n    \"state\": \"England\",\r\n    \"country\": \"United Kingdom\",\r\n    \"pincode\": \"NW1 6XE\"\r\n  },\r\n  \"cart\": {\r\n    \"cartId\": 9,\r\n    \"totalPrice\": 180,\r\n    \"products\": [\r\n      {\r\n        \"productId\": 109,\r\n        \"productName\": \"Marauder's Map\",\r\n        \"image\": \"marauders_map.jpg\",\r\n        \"description\": \"A magical map that shows every person's location in Hogwarts.\",\r\n        \"quantity\": 1,\r\n        \"price\": 180,\r\n        \"discount\": 0,\r\n        \"specialPrice\": 180\r\n      }\r\n    ]\r\n  }\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 11 Feb 2025 15:47:11 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"jwt-token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3MzkyODg4MzEsImVtYWlsIjoic2lyaXVzLmJsYWNrQG9yZGVyb2Z0aGVwaG9lbml4LmNvbSJ9.MdtnfLxETcB9wSgkuI3qEvGa66BWkMy8oI2LTiIw3VI\"\n}"
+				},
+				{
+					"name": "Hagrid",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\": 8,\r\n    \"firstName\": \"Rubeus\",\r\n    \"lastName\": \"Hagrid\",\r\n    \"mobileNumber\": \"0812345678\",\r\n    \"email\": \"rubeus.hagrid@hogwarts.com\",\r\n    \"password\": \"Norbert1992\",\r\n    \"roles\": [{\"roleId\": 102, \"roleName\": \"USER\"}],\r\n    \"address\": {\r\n      \"addressId\": 8,\r\n      \"street\": \"Hogwarts Grounds\",\r\n      \"buildingName\": \"Hagrid’s Hut\",\r\n      \"city\": \"Hogsmeade\",\r\n      \"state\": \"Scotland\",\r\n      \"country\": \"United Kingdom\",\r\n      \"pincode\": \"HW1 3ZZ\"\r\n    },\r\n    \"cart\": {\r\n      \"cartId\": 8,\r\n      \"totalPrice\": 75,\r\n      \"products\": [\r\n        {\r\n          \"productId\": 8,\r\n          \"productName\": \"Monster Book of Monsters\",\r\n          \"image\": \"monster_book.jpg\",\r\n          \"description\": \"A book that bites\",\r\n          \"quantity\": 1,\r\n          \"price\": 75,\r\n          \"discount\": 0,\r\n          \"specialPrice\": 75\r\n        }\r\n      ]\r\n    }\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 11 Feb 2025 15:47:47 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"jwt-token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3MzkyODg4NjcsImVtYWlsIjoicnViZXVzLmhhZ3JpZEBob2d3YXJ0cy5jb20ifQ.mf6KDuWPuRBXO1mz_aJTqSrspJ8n4Th9o8R8Y7wc760\"\n}"
+				},
+				{
+					"name": "Luna",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\": 9,\r\n    \"firstName\": \"Lunaa\",\r\n    \"lastName\": \"Lovegood\",\r\n    \"mobileNumber\": \"0812345678\",\r\n    \"email\": \"luna.lovegood@hogwarts.com\",\r\n    \"password\": \"Wrackspurts2024\",\r\n    \"roles\": [{\"roleId\": 102, \"roleName\": \"USER\"}],\r\n    \"address\": {\r\n      \"addressId\": 9,\r\n      \"street\": \"The Lovegood House\",\r\n      \"buildingName\": \"Tower-like house\",\r\n      \"city\": \"Ottery St. Catchpole\",\r\n      \"state\": \"Devon\",\r\n      \"country\": \"United Kingdom\",\r\n      \"pincode\": \"EX11 2LL\"\r\n    },\r\n    \"cart\": {\r\n      \"cartId\": 9,\r\n      \"totalPrice\": 40,\r\n      \"products\": [\r\n        {\r\n          \"productId\": 9,\r\n          \"productName\": \"Spectrespecs\",\r\n          \"image\": \"spectrespecs.jpg\",\r\n          \"description\": \"Helps to see Wrackspurts\",\r\n          \"quantity\": 1,\r\n          \"price\": 40,\r\n          \"discount\": 0,\r\n          \"specialPrice\": 40\r\n        }\r\n      ]\r\n    }\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 11 Feb 2025 15:48:29 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"jwt-token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3MzkyODg5MDksImVtYWlsIjoibHVuYS5sb3ZlZ29vZEBob2d3YXJ0cy5jb20ifQ.YdtSrw0-nWExA4CzhZ3bbQ36CiaEFiCeqx3H4O-Uvfo\"\n}"
+				},
+				{
+					"name": "Minerva",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\": 10,\r\n    \"firstName\": \"Minerva\",\r\n    \"lastName\": \"McGonagall\",\r\n    \"mobileNumber\": \"0812345678\",\r\n    \"email\": \"minerva.mcgonagall@hogwarts.com\",\r\n    \"password\": \"Transfiguration2024\",\r\n    \"roles\": [{\"roleId\": 102, \"roleName\": \"USER\"}],\r\n    \"address\": {\r\n      \"addressId\": 10,\r\n      \"street\": \"Hogwarts Castle\",\r\n      \"buildingName\": \"Transfiguration Office\",\r\n      \"city\": \"Hogsmeade\",\r\n      \"state\": \"Scotland\",\r\n      \"country\": \"United Kingdom\",\r\n      \"pincode\": \"HW1 4ZZ\"\r\n    },\r\n    \"cart\": {\r\n      \"cartId\": 10,\r\n      \"totalPrice\": 200,\r\n      \"products\": [\r\n        {\r\n          \"productId\": 10,\r\n          \"productName\": \"Tabby Cat Plush\",\r\n          \"image\": \"tabby_cat.jpg\",\r\n          \"description\": \"Looks like her Animagus form\",\r\n          \"quantity\": 1,\r\n          \"price\": 200,\r\n          \"discount\": 0,\r\n          \"specialPrice\": 200\r\n        }\r\n      ]\r\n    }\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 11 Feb 2025 15:49:01 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"jwt-token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3MzkyODg5NDEsImVtYWlsIjoibWluZXJ2YS5tY2dvbmFnYWxsQGhvZ3dhcnRzLmNvbSJ9.oX1nVRXpT-5CeTZiPV1J99YoMWjBmNWN3h4pTTb6Y3I\"\n}"
+				},
+				{
+					"name": "Voldemort",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\": 11,\r\n    \"firstName\": \"Lordd\",\r\n    \"lastName\": \"Voldemort\",\r\n    \"mobileNumber\": \"0812345678\",\r\n    \"email\": \"lord.voldemort@darkarts.com\",\r\n    \"password\": \"Horcruxes7\",\r\n    \"roles\": [{\"roleId\": 102, \"roleName\": \"USER\"}],\r\n    \"address\": {\r\n      \"addressId\": 11,\r\n      \"street\": \"Unknown\",\r\n      \"buildingName\": \"The Dark Lair\",\r\n      \"city\": \"Unknown\",\r\n      \"state\": \"Unknown\",\r\n      \"country\": \"United Kingdom\",\r\n      \"pincode\": \"000000\"\r\n    },\r\n    \"cart\": {\r\n      \"cartId\": 11,\r\n      \"totalPrice\": 999,\r\n      \"products\": [\r\n        {\r\n          \"productId\": 11,\r\n          \"productName\": \"Nagini Statue\",\r\n          \"image\": \"nagini.jpg\",\r\n          \"description\": \"Symbol of his most loyal companion\",\r\n          \"quantity\": 1,\r\n          \"price\": 999,\r\n          \"discount\": 0,\r\n          \"specialPrice\": 999\r\n        }\r\n      ]\r\n    }\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 11 Feb 2025 15:49:40 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"jwt-token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3MzkyODg5ODAsImVtYWlsIjoibG9yZC52b2xkZW1vcnRAZGFya2FydHMuY29tIn0.oLasOLJZ-KgSrmutIoEAJKHdNCbaHVkBCmO98cyEJXM\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3MzkyNzI4MTIsImVtYWlsIjoiaGFycnkucG90dGVyQGhvZ3dhcnRzLmNvbSJ9.2ojdgPOg8QvHVdoSD4l333bpZyNG7q8JTDtcTG7rbWA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"harry.potter@hogwarts.com\",\r\n  \"password\": \"Expelliarmus123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Harry Admin",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"harry.potter@hogwarts.com\",\r\n  \"password\": \"Expelliarmus123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 11 Feb 2025 15:50:28 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"jwt-token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3MzkyODkwMjgsImVtYWlsIjoiaGFycnkucG90dGVyQGhvZ3dhcnRzLmNvbSJ9.I5favtpaqlWWhJ22dejDo44oQ0WVr-okYzjIIU3yKDQ\"\n}"
+				},
+				{
+					"name": "Hermione User",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"hermione.granger@hogwarts.com\",\r\n    \"password\": \"Leviosa2024\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 11 Feb 2025 18:31:27 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"jwt-token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJFdmVudCBTY2hlZHVsZXIiLCJpYXQiOjE3MzkyOTg2ODcsImVtYWlsIjoiaGVybWlvbmUuZ3JhbmdlckBob2d3YXJ0cy5jb20ifQ.L4Bw48sTY9m_w8Jl_mfiQiBObi3DoQB0Lfrb39EkRZc\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Admin Address",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Admin Addresses",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Admin Addresses ID",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Admin Addresses ID PUT",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Admin Addresses",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Admin Carts",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "delete public carts id product id",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "put public carts id products id quantity brp",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "POST public carts id products id quantity brp",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "get public users email carts id",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "put admin categories id",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "delete admin categories id",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Admin Category",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Public Categories",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "get admin orders",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "put order status",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "post order",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "get public email orders",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "get public email orders id",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "POST admin categories id product",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "put update product",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "FAILED delete product",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "FAILED put product image",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "get category products",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Public Products",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "FAILED get keyword products",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "admin get users",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "delete user",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "FAILED public get user",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "FAILED put public update user",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}

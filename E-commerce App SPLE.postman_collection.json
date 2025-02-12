@@ -1272,7 +1272,7 @@
 			"response": []
 		},
 		{
-			"name": "FAILED delete product",
+			"name": "delete product",
 			"request": {
 				"method": "GET",
 				"header": []
@@ -1280,7 +1280,7 @@
 			"response": []
 		},
 		{
-			"name": "FAILED put product image",
+			"name": "put product image",
 			"request": {
 				"method": "GET",
 				"header": []
@@ -1304,7 +1304,7 @@
 			"response": []
 		},
 		{
-			"name": "FAILED get keyword products",
+			"name": "get keyword products",
 			"request": {
 				"method": "GET",
 				"header": []

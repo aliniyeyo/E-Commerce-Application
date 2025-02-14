@@ -20,5 +20,7 @@ public class OrderDTO {
 	private PaymentDTO payment;
 	private Double totalAmount;
 	private String orderStatus;
-
+	// Tambahan untuk credit card payment only
+	private String cardNo;
+	private String cvc;
 }

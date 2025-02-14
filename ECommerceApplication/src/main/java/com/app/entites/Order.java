@@ -45,4 +45,10 @@ public class Order {
 	
 	private Double totalAmount;
 	private String orderStatus;
+
+	@Column
+	private String cardNo;
+
+	@Column
+	private String cvc;
 }
